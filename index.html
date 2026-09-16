@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Static site — WAYHOST hosting</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Static site is live</h1>
+    <p>nginx is serving this file straight off the node. Nothing else is running: no
+       PHP pool, no systemd unit, no port.</p>
+
+    <h2>What this page proves</h2>
+    <ul>
+      <li>The document root exists and nginx can traverse the account's home.</li>
+      <li>The vhost was accepted (<code>nginx -t</code> passed) and reloaded.</li>
+      <li>A relative asset resolves — the stylesheet below loaded if this box is blue.</li>
+      <li>DNS points at the node, or you are reaching it another way.</li>
+    </ul>
+
+    <p class="check">If this block has a blue border, <code>style.css</code> was served too.</p>
+
+    <h2>Try these by hand</h2>
+    <ul>
+      <li><a href="page-two.html">page-two.html</a> — a second file, reachable by its own name.</li>
+      <li><a href="nothing-here.html">nothing-here.html</a> — should be a 404 from nginx.</li>
+      <li><a href="/.hidden">/.hidden</a> — dotfiles are denied by the vhost.</li>
+    </ul>
+  </main>
+</body>
+</html>
