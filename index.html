@@ -1,43 +1,37 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Static site — WAYHOST hosting</title>
-<meta name="description" content="A minimal static page served straight from nginx — no PHP, no systemd unit, no port. Proves the document root, vhost and relative assets all work.">
-<meta name="theme-color" content="#2B73F4">
-<meta property="og:image" content="og-image.svg">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232B73F4'/%3E%3Cstop offset='1' stop-color='%23672CF5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='16' y='22' font-family='system-ui,sans-serif' font-size='18' font-weight='900' fill='white' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="style.css">
+<title>Voyage &amp; Cie — Agence de voyage sur mesure</title>
+<meta name="description" content="Séjours sur mesure, hors des sentiers battus, préparés par une petite équipe.">
+<meta name="theme-color" content="#D97706">
+<meta property="og:image" content="/og-image.svg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23D97706'/%3E%3C/svg%3E">
+<style>
+  body{margin:0;font:16px/1.5 system-ui,sans-serif;color:#3a2308;background:#fffbeb}
+  header{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;border-bottom:1px solid #fde68a}
+  header b{color:#D97706}
+  nav a{margin-left:22px;color:#78350f;text-decoration:none;font-size:14px}
+  main{max-width:700px;margin:0 auto;padding:78px 24px;text-align:center}
+  h1{font-size:38px;margin:0 0 14px}
+  p{color:#7c4a12;font-size:17px}
+  button{margin-top:24px;padding:12px 26px;border:0;border-radius:8px;background:#D97706;color:#fff;font:600 15px system-ui,sans-serif;cursor:pointer}
+</style>
 </head>
 <body>
+<header>
+  <b>Voyage &amp; Cie</b>
   <nav>
-    <a href="index.html">Accueil</a>
-    <a href="page-two.html">Page deux</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#sur-mesure">Sur mesure</a>
+    <a href="#contact">Contact</a>
   </nav>
-  <main>
-    <h1>Static site is live</h1>
-    <p>nginx is serving this file straight off the node. Nothing else is running: no
-       PHP pool, no systemd unit, no port.</p>
-
-    <button type="button" onclick="navigator.clipboard.writeText(location.href); this.textContent='Copié !'">Copier le lien de ce site</button>
-
-    <h2>What this page proves</h2>
-    <ul>
-      <li>The document root exists and nginx can traverse the account's home.</li>
-      <li>The vhost was accepted (<code>nginx -t</code> passed) and reloaded.</li>
-      <li>A relative asset resolves — the stylesheet below loaded if this box is blue.</li>
-      <li>DNS points at the node, or you are reaching it another way.</li>
-    </ul>
-
-    <p class="check">If this block has a blue border, <code>style.css</code> was served too.</p>
-
-    <h2>Try these by hand</h2>
-    <ul>
-      <li><a href="page-two.html">page-two.html</a> — a second file, reachable by its own name.</li>
-      <li><a href="nothing-here.html">nothing-here.html</a> — should be a 404 from nginx.</li>
-      <li><a href="/.hidden">/.hidden</a> — dotfiles are denied by the vhost.</li>
-    </ul>
-  </main>
+</header>
+<main>
+  <h1>Des voyages sur mesure, hors des sentiers battus</h1>
+  <p>Une petite équipe qui prépare chaque itinéraire à la main, aucun forfait tout fait.</p>
+  <button type="button">Parler à un conseiller</button>
+</main>
 </body>
 </html>
