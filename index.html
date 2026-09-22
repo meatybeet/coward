@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Vue SPA — WAYHOST hosting</title>
+  <!--
+    Shaped like the output of `npm run build` (Vite): an index.html at the top level
+    plus hashed files under assets/. Replace this folder with your own dist and the
+    upload works the same way.
+
+    The router below is deliberately HASH-based (#/about). The static vhost ends in
+    `try_files $uri $uri/ =404`, so there is no SPA fallback on the node: with
+    history mode, / works but reloading /about returns nginx's 404. Hash routes never
+    leave the server, so they survive a refresh.
+  -->
+  <link rel="stylesheet" href="/assets/index-8f2a41c7.css">
+  <script type="module" crossorigin src="/assets/index-4b91d0e5.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- Replaced on mount. Visible only if the JS bundle failed to load. -->
+    <noscript>This build needs JavaScript.</noscript>
+  </div>
+</body>
+</html>
