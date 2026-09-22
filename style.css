@@ -8,6 +8,16 @@ body {
   color: #1a2b4b;
 }
 
+nav {
+  max-width: 640px;
+  margin: 0 auto 12px;
+  display: flex;
+  gap: 16px;
+}
+
+nav a { font-weight: 600; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+
 main {
   max-width: 640px;
   margin: 0 auto;
@@ -16,6 +26,19 @@ main {
   border-radius: 12px;
   padding: 28px 32px;
 }
+
+button {
+  margin: 14px 0;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font: inherit;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #2b73f4, #672cf5);
+  cursor: pointer;
+}
+button:hover { opacity: .9; }
 
 h1 { margin: 0 0 8px; font-size: 24px; }
 h2 { margin: 24px 0 8px; font-size: 16px; color: #5b6b8a; }
